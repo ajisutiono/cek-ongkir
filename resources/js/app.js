@@ -45,14 +45,10 @@ $(function () {
                     })
                 };
             },
-            error: function (xhr, status, error) {
-                console.error('Error:', error); 
-                alert('Terjadi kesalahan saat memuat data. Silakan coba lagi.');
-            },
             cache: true 
         },
         placeholder: "Pilih kota tujuan", 
-        minimumInputLength: 2
+        
     });
 });
 
