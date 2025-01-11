@@ -67,7 +67,7 @@
                     <div class="form-row">
                         <div class="col">
                             <h5 class="text-muted">Asal Pengirim:</h5>
-                            <div class="form-group">
+                            <div class="row mb-3">
                                 <label for="">Provinsi</label>
                                 <select name="origin_province" id="" class="form-control">
                                     <option value="#">-</option>
@@ -76,14 +76,14 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="row mb-3">
                                 <label for="">Kota/Kabupaten</label>
-                                <select name="origin_city" id="" class="form-control">
+                                <select name="origin_city" id="origin_city" class="form-control">
                                     <option value="#">-</option>
                                 </select>
                             </div>
                             <h5 class="text-muted">Tujuan Pengirim:</h5>
-                            <div class="form-group">
+                            <div class="row mb-3">
                                 <label for="">Kota/Kabupaten</label>
                                 <select name="destination_city" id="destination_city" class="form-control">
                                     <option value="#">-</option>
