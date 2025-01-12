@@ -64,7 +64,7 @@
             <div class="card-body">
                 <form action="#" method="POST">
                     @csrf
-                    <div class="form-row">
+                    <div class="row">
                         <div class="col">
                             <h5 class="text-muted">Asal Pengirim:</h5>
                             <div class="row mb-3">
@@ -92,16 +92,18 @@
                         </div>
                         <div class="col">
                             <h5 class="text-muted">Pilih Expedisi:</h5>
-
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="courier" name="courier"
-                                    value="">
-                                <label class="form-check-label" for="courier-"></label>
-                            </div>
+                            @foreach ($courier as $key => $value)
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="courier-{{ $key }}"
+                                        name="courier[]" value="{{ $value->code }}">
+                                    <label class="form-check-label"
+                                        for="courier-{{ $key }}">{{ $value->title }}</label>
+                                </div>
+                            @endforeach
 
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="row">
                         <div class="col">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>

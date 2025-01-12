@@ -47,8 +47,7 @@ $(function () {
             },
             cache: true 
         },
-        placeholder: "Pilih kota tujuan", 
-        
+              
     });
 });
 
