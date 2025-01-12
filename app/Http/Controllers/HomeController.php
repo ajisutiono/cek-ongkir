@@ -34,15 +34,24 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
+        $courier = $request->input('courier');
 
-        $ongkir = RajaOngkir::ongkosKirim([
-            'origin'        => $request->origin_city,
-            'destination'   => $request->destination_city,
-            'weight'        => 1300,
-            'courier'       => $request->courier[0]
-        ])->get();
+        if ($courier) {
+            $result = [];
 
-        dd($ongkir);
+            foreach ($courier as $row) {
+                $ongkir = RajaOngkir::ongkosKirim([
+                    'origin'        => $request->origin_city,  
+                    'destination'   => $request->destination_city,  
+                    'weight'        => 1300,    
+                    'courier'       => $row   
+                ])->get();
+
+                $result[] = $ongkir;
+            }
+        }
+
+        return $result;
     }
 
     public function getCourier()
