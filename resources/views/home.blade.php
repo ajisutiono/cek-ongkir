@@ -62,7 +62,7 @@
                 <h4 class="my-0 font-weight-normal">Formulir Cek Ongkir</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('store') }}" method="POST">
+                <form action="{{ route('cost') }}" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col">
